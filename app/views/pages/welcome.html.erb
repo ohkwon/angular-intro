@@ -1,9 +1,9 @@
 <div ng-app="app">
   <div ng-controller="exampleCtrl">
-    <input ng-model = "message">
-    {{ message }}
-    <p>{{ task1 }}</p>
-    <p>{{ task2 }}</p>
-    <p>{{ task3 }}</p>
+    <div ng-repeat = "task in tasks">
+      {{ task }} <input ng-model = "task">
+    </div>
+    <input ng-model = "newTask">
+    <button ng-click = "addTask(newTask)">Add Task</button>
   </div>
 </div>
