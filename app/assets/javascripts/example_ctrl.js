@@ -12,7 +12,7 @@
       $scope.reviews.push(newReview);
     }
 
-    $scope.tasks = ["Walk the dinner", "eat the kitche", "clean the roof"]
+    $scope.tasks = ["Walk the dinner", "eat the kitchen", "clean the roof"]
 
     $scope.addTask = function(newTask) {
       if (newTask != null) {
@@ -22,9 +22,7 @@
     }
 
     $scope.finish = function(finishedTask) {
-      console.log(finishedTask);
-      var index = $scope.tasks.indexOf(finishedTask);
-      $scope.tasks.splice(index, 1);
+      $scope.tasks.splice(finishedTask, 1);
     }
 
 
