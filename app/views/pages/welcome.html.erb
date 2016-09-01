@@ -1,7 +1,10 @@
 <div ng-app="app">
   <div ng-controller="exampleCtrl">
     <div ng-repeat = "task in tasks">
-      {{ task }} <input ng-model = "task">
+      <button ng-click = "finish(task)">
+        {{ task }}
+      </button>
+      <input ng-model = "task">
     </div>
     <input ng-model = "newTask">
     <button ng-click = "addTask(newTask)">Add Task</button>

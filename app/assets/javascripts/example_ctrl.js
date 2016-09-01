@@ -15,9 +15,17 @@
     $scope.tasks = ["Walk the dinner", "eat the kitche", "clean the roof"]
 
     $scope.addTask = function(newTask) {
-      $scope.tasks.push(newTask);
+      if (newTask != null) {
+        $scope.tasks.push(newTask);
+        $scope.newTask = null
+      }
     }
 
+    $scope.finish = function(finishedTask) {
+      console.log(finishedTask);
+      var index = $scope.tasks.indexOf(finishedTask);
+      $scope.tasks.splice(index, 1);
+    }
 
 
     window.$scope = $scope;
